@@ -175,6 +175,14 @@ input[type="submit"]:hover {
   margin-top: 20px;
 }
 
+.logo-black {
+  display: none;
+  height: 50px;
+  width: auto;
+  float: left;
+  margin: 5px 0px;
+}
+
 .main-nav {
   float: right;
   list-style: none; /*remove bullets*/
@@ -193,13 +201,53 @@ input[type="submit"]:hover {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 90%;
-  border-bottom: 2px solid transparent;
+  border-bottom: 5px solid transparent;
   transition: border-bottom 0.4s;
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
-  border-bottom: 2px solid #e67e22;
+  border-bottom: 5px solid #e67e22;
+}
+
+.mobile-nav-icon {
+  float: right;
+  cursor: pointer;
+  margin-top: 30px;
+  display: none;
+}
+
+.mobile-nav-icon ion-icon {
+  font-size: 200%;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.884);
+  box-shadow: 0px 2px 4px #b9b9b9;
+  z-index: 9999; /*set to maxium 9999 height of stack of element*. Element always on top of all elements*/
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+  color: #3d3d3d;
+  padding: 18px 0px;
+}
+
+.sticky .logo-black {
+  display: block;
+}
+
+.sticky .logo {
+  display: none;
+}
+
+.sticky .main-nav {
+  margin-top: 15px;
 }
 
 .section-meals {
@@ -244,7 +292,7 @@ input[type="submit"]:hover {
 }
 
 .steps-box:last-child {
-  padding-left: 3%;
+  padding-left: 0%;
   margin-top: 90px;
 }
 
@@ -523,3 +571,24 @@ footer p {
 .logo-instagram:hover {
   color: #c32aa3;
 }
+
+/* For animation on scroll */
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+  opacity: 0;
+  animation-duration: 1s;
+}
+
+.js--wp-4 {
+  animation-duration: 1s;
+}
+
+/* new selector for (both .js--wp-1 and .animated exist at the same time) */
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+  opacity: 1;
+}
+
+/* For animation on scroll */

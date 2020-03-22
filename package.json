@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "Front-end with HTML5 & CSS3 & jQ",
   "main": "index.js",
-  "scripts": {
-    "start": "npx http-server",
-    "watch:js": "parcel watch ./js/index.js --out-dir ./js/ --out-file bundle.js",
-    "build:js": "parcel build ./js/index.js --out-dir ./js/ --out-file bundle.js"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FresherDuong/omniFood.git"
